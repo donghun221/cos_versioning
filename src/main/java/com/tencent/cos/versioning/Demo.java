@@ -48,10 +48,10 @@ public class Demo {
 	        } else if (commandLine.hasOption("restoreVersion")) {
         			List<String> arg = commandLine.getArgList();
         			Operation.restoreVersion(arg.get(0), arg.get(1), arg.get(2));
-	        } else if (commandLine.hasOption("setVersionLiftcycle")) {
+	        } else if (commandLine.hasOption("setVersionLifecycle")) {
     				List<String> arg = commandLine.getArgList();
     				Operation.setVersionLifecycle(arg.get(0));
-	        } else if (commandLine.hasOption("getVersionLiftcycle")) {
+	        } else if (commandLine.hasOption("getVersionLifecycle")) {
     				List<String> arg = commandLine.getArgList();
     				Operation.getVersionLifecycle(arg.get(0));
 	        }
@@ -70,8 +70,8 @@ public class Demo {
 	    posixOptions.addOption("listVersion", false, "List Versioning.");
 	    posixOptions.addOption("deleteVersion", false, "Delete Versioning.");
 	    posixOptions.addOption("restoreVersion", false, "Restore Versioning.");
-	    posixOptions.addOption("setVersionLiftcycle", false, "Set Versioning life cycle expire after 90 days.");
-	    posixOptions.addOption("getVersionLiftcycle", false, "Restore Versioning.");
+	    posixOptions.addOption("setVersionLifecycle", false, "Set Versioning life cycle expire after 90 days.");
+	    posixOptions.addOption("getVersionLifecycle", false, "Restore Versioning.");
 
 	    return posixOptions;
 	}	
