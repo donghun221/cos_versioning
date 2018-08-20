@@ -199,7 +199,7 @@ public class Operation {
 
 	public static void setVersionLifecycle(String bucket) {
 		BucketLifecycleConfiguration conf = new BucketLifecycleConfiguration();
-        BucketLifecycleConfiguration.Rule rule = new BucketLifecycleConfiguration.Rule()
+        	BucketLifecycleConfiguration.Rule rule = new BucketLifecycleConfiguration.Rule()
                 .withId("delete non current version older than 90 days")
                 .withNoncurrentVersionExpirationInDays(90)
                 .withExpiredObjectDeleteMarker(true)
