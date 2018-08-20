@@ -13,7 +13,7 @@ public class Demo {
 	// Main function
 	public static void main(String[] args) {
 	    if (args.length < 1) {
-	    		System.out.println("No arguments provided");
+	        System.out.println("No arguments provided");
 	    }
 
 	    usePosixParser(args);	    
@@ -27,36 +27,36 @@ public class Demo {
 	    final Options posixOptions = constructPosixOptions();
 	    CommandLine commandLine;
 	    try {
-	    		commandLine = cmdLinePosixParser.parse(posixOptions, commandLineArguments);
+	    	    commandLine = cmdLinePosixParser.parse(posixOptions, commandLineArguments);
 	        if (commandLine.hasOption("listBucket")) {
-		        Operation.listBucketsWithVersionStatus();
+		    Operation.listBucketsWithVersionStatus();
 	        } else if (commandLine.hasOption("listObject")) {
-	        		List<String> arg = commandLine.getArgList();
-	        		Operation.listObject(arg.get(0));
+	            List<String> arg = commandLine.getArgList();
+	            Operation.listObject(arg.get(0));
 	        } else if (commandLine.hasOption("enableBucketVersion")) {
-        			List<String> arg = commandLine.getArgList();
-    				Operation.enableBucketVersion(arg.get(0));
+        	    List<String> arg = commandLine.getArgList();
+    		    Operation.enableBucketVersion(arg.get(0));
 	        } else if (commandLine.hasOption("disableBucketVersion")) {
-    				List<String> arg = commandLine.getArgList();
-				Operation.disableBucketVersion(arg.get(0));
+    		    List<String> arg = commandLine.getArgList();
+		    Operation.disableBucketVersion(arg.get(0));
 	        } else if (commandLine.hasOption("listVersion")) {
-				List<String> arg = commandLine.getArgList();
-				Operation.listVersions(arg.get(0));
+		    List<String> arg = commandLine.getArgList();
+		    Operation.listVersions(arg.get(0));
 	        } else if (commandLine.hasOption("deleteVersion")) {
-	        		List<String> arg = commandLine.getArgList();
-	        		Operation.deleteVersion(arg.get(0), arg.get(1), arg.get(2));
+	            List<String> arg = commandLine.getArgList();
+	            Operation.deleteVersion(arg.get(0), arg.get(1), arg.get(2));
 	        } else if (commandLine.hasOption("restoreVersion")) {
-        			List<String> arg = commandLine.getArgList();
-        			Operation.restoreVersion(arg.get(0), arg.get(1), arg.get(2));
+        	    List<String> arg = commandLine.getArgList();
+        	    Operation.restoreVersion(arg.get(0), arg.get(1), arg.get(2));
 	        } else if (commandLine.hasOption("setVersionLifecycle")) {
-    				List<String> arg = commandLine.getArgList();
-    				Operation.setVersionLifecycle(arg.get(0));
+    		    List<String> arg = commandLine.getArgList();
+    		    Operation.setVersionLifecycle(arg.get(0));
 	        } else if (commandLine.hasOption("getVersionLifecycle")) {
-    				List<String> arg = commandLine.getArgList();
-    				Operation.getVersionLifecycle(arg.get(0));
+    		    List<String> arg = commandLine.getArgList();
+    		    Operation.getVersionLifecycle(arg.get(0));
 	        }
 	    } catch (ParseException parseException) {
-	         System.err.println("Encountered exception while parsing using PosixParser:\n" + parseException.getMessage() );
+	        System.err.println("Encountered exception while parsing using PosixParser:\n" + parseException.getMessage() );
 	    }
 	}
 	
