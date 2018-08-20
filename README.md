@@ -9,11 +9,14 @@ E.g: java -jar target/demo.jar -listVersion demo-1252246555
 
 # Supported Command
  - listBucket
- - listObject [bucket name as args]
- - enableBucketVersion [bucket name as args]
- - disableBucketVersion [bucket name as args]
- - listVersion [bucket name as args]
+ - listObject [bucketName]
+ - enableBucketVersion [bucketName]
+ - disableBucketVersion [bucketName]
+ - listVersion [bucketName]
  - deleteVersion [bucketName] [keyName] [VersionId]
  - restoreVersion [bucketName] [keyName] [VersionId]
  - setVersionLiftcycle [bucketName]
  - getVersionLifecycle [bucketName]
+ 
+# Running example
+ - java -jar target/demo.jar -[command] [args]
